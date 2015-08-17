@@ -6,6 +6,6 @@ import views
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^locount/', include('locount.urls',namespace='locount')),
-    url(r'^$', RedirectView.as_view(url=reverse_lazy('locount:input'))),
+    url(r'^locount/', include('locount.urls',namespace='locount')),         #load app:locount urls
+    url(r'^$', RedirectView.as_view(url=reverse_lazy('locount:input'))),    #redirect to http://<server>/locount/input/
 )

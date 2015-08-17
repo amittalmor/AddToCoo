@@ -7,6 +7,8 @@ import models
 from django.forms.util import ErrorList
 from django import forms
 
+
+# this form is used for the User inputs
 class UserAddressView(FormView):
     template_name = 'locount/user_address.html'
     form_class = AddressForm
@@ -16,13 +18,14 @@ class UserAddressView(FormView):
         if obj is not None:
             self.success_url = obj.get_absolute_url()
         else:
+            #display an error to the user
             form._errors[forms.forms.NON_FIELD_ERRORS] = ErrorList([u'Please Enter a valid address'])
             return self.form_invalid(form)
         
         return super(UserAddressView, self).form_valid(form)
         
 
-
+# this view is used to reflect the relevant GeoAddress object
 class ShowMapView(DetailView):
     model = models.GeoAddress
     
