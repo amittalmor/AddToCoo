@@ -21,9 +21,9 @@ AddToCoo$ python manage.py runserver
 ```
 
 #### Open a web browser and enter the url:
-```
-e.g. [http://localhost:8000] (http://localhost:8000)
-```
+
+[http://localhost:8000] (http://localhost:8000)
+
 
 ## References
 * [static map display documentation] (https://developers.google.com/maps/documentation/staticmaps/intro)
