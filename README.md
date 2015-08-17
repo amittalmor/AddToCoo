@@ -26,3 +26,4 @@ Download the code or pull to your local machine
   
 * django views documentation
   https://docs.djangoproject.com/en/1.8/ref/class-based-views/generic-editing/
+  
