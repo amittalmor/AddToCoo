@@ -15,14 +15,14 @@ pip install geopy
 ## Usage:
 * Download the code or pull to your local machine
 
-### Run django (localhost):
+#### Run django (localhost):
 ```
 AddToCoo$ python manage.py runserver
 ```
 
-### Open a web browser and enter the url:
+#### Open a web browser and enter the url:
 ```
-e.g. http://localhost:8000
+e.g. [http://localhost:8000] (http://localhost:8000)
 ```
 
 ## References
