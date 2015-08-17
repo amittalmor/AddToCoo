@@ -25,7 +25,7 @@ class AddressForm(forms.Form):
                 lookup_address = '%s %s' % (lookup_address,val)
         lookup_address = lookup_address.strip()
         
-        # convert the address to latituse and longtitude
+        # convert the address to latituse and longitude
         lat,lng = helpers.convert_address_to_lat_lon(lookup_address)
         if lat is not None and lng is not None:
             # create/update a GeoAddress objectand return it

@@ -37,9 +37,9 @@ class ShowMapView(DetailView):
     
     def get_image_source(self):
         url = 'http://maps.googleapis.com/maps/api/staticmap'
-        center = '%s,%s' % (self.object.latitude,self.object.longtitude)
+        center = '%s,%s' % (self.object.latitude,self.object.longitude)
         markers = []
-        markers.append('markers=color:red|label:.|%s,%s' % (self.object.latitude,self.object.longtitude))
+        markers.append('markers=color:red|label:.|%s,%s' % (self.object.latitude,self.object.longitude))
         image_src = "%s?center=%s&size=1200x600&maptype=roadmap&%s&zoom=10&sensor=false" % (url,center,'&'.join(markers))
         return image_src
     

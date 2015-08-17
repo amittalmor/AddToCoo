@@ -17,7 +17,7 @@ def get_or_create_geo_address(address,lat,lng):
     #check if such entry exists
     #if yes - just update the count
     #if no - create a new db entry with the relevant data
-    qs = models.GeoAddress.objects.filter(latitude=lat,longtitude=lng)
+    qs = models.GeoAddress.objects.filter(latitude=lat,longitude=lng)
     if len(qs) > 0:
         obj = qs[0]
         obj.count += 1
@@ -25,7 +25,7 @@ def get_or_create_geo_address(address,lat,lng):
         obj = models.GeoAddress()
         obj.address=address
         obj.latitude=lat
-        obj.longtitude=lng
+        obj.longitude=lng
         obj.count=1
     obj.save()
     return obj 
