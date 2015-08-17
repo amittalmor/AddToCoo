@@ -10,3 +10,13 @@ For each valid address, the amount of visits is being counted
 ```
 pip install geopy
 ```
+
+
+## Download:
+Download the code or pull to your local machine
+
+### Run (localhost):
+```
+.../AddToCoo$ python manage.py runserver
+```
+
